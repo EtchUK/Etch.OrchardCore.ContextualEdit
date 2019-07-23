@@ -1,0 +1,21 @@
+﻿@model Etch.OrchardCore.ContextualEdit.ViewModels.ContextualEditPartDisplayViewModel
+
+<div class="editor-toolbar">
+    <div class="editor-toolbar__content">
+        <h3>Viewing @Model.ContentItem.DisplayText</h3>
+        @if (Model.ContentItem.Published)
+        {
+            <p>Published by @Model.ContentItem.Author on @Model.ContentItem.PublishedUtc.Value.ToString().</p>
+        }
+        else
+        {
+            <p>Draft</p>
+        }
+
+        <ul class="list list--options">
+            <li class="list__item">
+                <a edit-for="@Model.ContentItem" asp-route-returnUrl="@FullRequestPath">@T["Edit"] @Model.ContentItem.ContentType</a>
+            </li>
+        </ul>
+    </div>
+</div>
