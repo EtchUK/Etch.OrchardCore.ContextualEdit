@@ -6,8 +6,8 @@
   "website": "https://etchuk.com",
   "version": "0.1.0",
   "issetuprecipe": false,
-  "categories": [ "Content" ],
-  "tags": [ "etch" ],
+  "categories": ["Content"],
+  "tags": ["etch"],
   "steps": [
     {
       "name": "ContentDefinition",
@@ -16,19 +16,23 @@
           "Name": "ContextualEditControl",
           "DisplayName": "Contextual Edit Control",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": "False",
+              "Draftable": "False",
+              "Versionable": "False",
+              "Listable": "False",
+              "Securable": "False",
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "ContextualEditPart",
               "Name": "ContextualEditPart",
               "Settings": {
-                "Position": "1"
+                "ContentTypeSettings": {
+                  "Position": "1"
+                }
               }
             }
           ]
