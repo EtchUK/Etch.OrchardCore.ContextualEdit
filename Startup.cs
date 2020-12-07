@@ -13,9 +13,8 @@ namespace Etch.OrchardCore.ContextualEdit
     {
         public override void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IContentPartDisplayDriver, ContextualEditPartDisplay>();
-
-            services.AddSingleton<ContentPart, ContextualEditPart>();
+            services.AddContentPart<ContextualEditPart>()
+                .UseDisplayDriver<ContextualEditPartDisplay>();
 
             services.AddScoped<IContextualEditService, ContextualEditService>();
 
