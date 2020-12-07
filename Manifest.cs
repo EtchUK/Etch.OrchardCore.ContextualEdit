@@ -5,6 +5,6 @@ using OrchardCore.Modules.Manifest;
     Category = "Content",
     Description = "Widget for displaying edit control for page being viewed.",
     Name = "Contextual Edit",
-    Version = "0.3.1",
+    Version = "0.3.2",
     Website = "https://etchuk.com"
 )]
