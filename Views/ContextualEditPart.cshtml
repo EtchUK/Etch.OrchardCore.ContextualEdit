@@ -1,21 +1,21 @@
-﻿@model Etch.OrchardCore.ContextualEdit.ViewModels.ContextualEditPartDisplayViewModel
-
-<div class="editor-toolbar">
+﻿<div class="editor-toolbar js-editor-toolbar">
     <div class="editor-toolbar__content">
-        <h3>Viewing @Model.ContentItem.DisplayText</h3>
+        <h3 class="margin--bottom-small text--uppercase">@Model.ContentItem.DisplayText</h3>
         @if (Model.ContentItem.Published)
         {
-            <p>Published by @Model.ContentItem.Author on @Model.ContentItem.PublishedUtc.Value.ToString().</p>
+            <p class="text--size-small font--subheading margin--bottom-none">
+                @T["Published by {0} on {1}.", Model.ContentItem.Author, Model.ContentItem.PublishedUtc.ToString()]
+                <a edit-for="@Model.ContentItem" asp-route-returnUrl="@FullRequestPath" class="link--edit">@T["Edit"] @Model.ContentItem.ContentType</a>
+                <a href="#" onclick="document.querySelector('.js-editor-toolbar').remove(); return false;">Hide</a>
+            </p>
         }
         else
         {
-            <p>Draft</p>
+            <p class="text--size-small font--subheading margin--bottom-none">
+                @T["Draft"].
+                <a edit-for="@Model.ContentItem" asp-route-returnUrl="@FullRequestPath" class="link--edit">@T["Edit"] @Model.ContentItem.ContentType</a>
+                <a href="#" onclick="document.querySelector('.js-editor-toolbar').remove(); return false;">Hide</a>
+            </p>
         }
-
-        <ul class="list list--options">
-            <li class="list__item">
-                <a edit-for="@Model.ContentItem" asp-route-returnUrl="@FullRequestPath">@T["Edit"] @Model.ContentItem.ContentType</a>
-            </li>
-        </ul>
     </div>
 </div>
