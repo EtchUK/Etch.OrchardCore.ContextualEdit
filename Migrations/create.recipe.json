@@ -17,13 +17,11 @@
           "DisplayName": "Contextual Edit Control",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": "False",
-              "Draftable": "False",
-              "Versionable": "False",
-              "Listable": "False",
-              "Securable": "False",
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Miscellaneous",
+            "Description": "Display edit controls for the current page.",
+            "Icon": "edit"
           },
           "ContentTypePartDefinitionRecords": [
             {
