@@ -4,7 +4,7 @@ Module for [Orchard Core](https://github.com/OrchardCMS/OrchardCore) that provid
 
 ## Build Status
 
-[![Build Status](https://secure.travis-ci.org/etchuk/Etch.OrchardCore.ContextualEdit.png?branch=master)](http://travis-ci.org/etchuk/Etch.OrchardCore.ContextualEdit) [![NuGet](https://img.shields.io/nuget/v/Etch.OrchardCore.ContextualEdit.svg)](https://www.nuget.org/packages/Etch.OrchardCore.ContextualEdit)
+[![NuGet](https://img.shields.io/nuget/v/Etch.OrchardCore.ContextualEdit.svg)](https://www.nuget.org/packages/Etch.OrchardCore.ContextualEdit)
 
 ## Orchard Core Reference
 
