@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.4.0</Version>
+    <Version>$(VersionNumber)</Version>
     <PackageId>Etch.OrchardCore.ContextualEdit</PackageId>
     <Title>Contextual Edit</Title>
     <Authors>Etch</Authors>
