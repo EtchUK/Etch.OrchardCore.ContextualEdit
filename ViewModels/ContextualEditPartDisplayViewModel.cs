@@ -4,6 +4,12 @@ namespace Etch.OrchardCore.ContextualEdit.ViewModels
 {
     public class ContextualEditPartDisplayViewModel
     {
-        public ContentItem ContentItem;
+        private ContentItem _contentItem { get; set; }
+
+        public ContentItem ContentItem
+        {
+            get { return _contentItem; }
+            set { _contentItem = value; }
+        }
     }
 }
