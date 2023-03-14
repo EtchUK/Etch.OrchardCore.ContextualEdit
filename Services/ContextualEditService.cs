@@ -9,7 +9,7 @@ namespace Etch.OrchardCore.ContextualEdit.Services
     {
         #region Dependencies
 
-        private readonly IContentHandleManager _contentHandleProvider;
+        private readonly IContentHandleManager _contentHandleManager;
         private readonly IContentManager _contentManager;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly ISiteService _siteService;
@@ -20,7 +20,7 @@ namespace Etch.OrchardCore.ContextualEdit.Services
 
         public ContextualEditService(IContentHandleManager contentHandleProvider, IContentManager contentManager, IHttpContextAccessor httpContextAccessor, ISiteService siteService)
         {
-            _contentHandleProvider = contentHandleProvider;
+            _contentHandleManager = contentHandleProvider;
             _contentManager = contentManager;
             _httpContextAccessor = httpContextAccessor;
             _siteService = siteService;
@@ -38,7 +38,8 @@ namespace Etch.OrchardCore.ContextualEdit.Services
             {
                 return await GetHomepageAsync();
             }
-            var contentItemId = await _contentHandleProvider.GetContentItemIdAsync($"slug:{path}");
+
+            var contentItemId = await _contentHandleManager.GetContentItemIdAsync($"slug:{path}");
 
             if (string.IsNullOrEmpty(contentItemId))
             {
