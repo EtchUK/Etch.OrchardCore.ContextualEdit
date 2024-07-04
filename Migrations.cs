@@ -29,7 +29,7 @@ namespace Etch.OrchardCore.ContextualEdit
         {
             #region Contextual Edit Part
 
-            _contentDefinitionManager.AlterPartDefinition("ContextualEditPart", part => part
+            await _contentDefinitionManager.AlterPartDefinitionAsync("ContextualEditPart", part => part
                 .WithDescription("When authorised, displays edit control for current page.")
                 .WithDisplayName("Contextual Edit"));
 
